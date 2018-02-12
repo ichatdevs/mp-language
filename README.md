@@ -32,10 +32,12 @@ const Lang = require('/libraries/mp-language/languages')
 
 App({
 
-	if (!Lang.getLanguage()) {
-
-    Lang.setLanguage()
-
+  onLaunch: function (options) {
+    ...
+    if (!Lang.getLanguage()) {
+      Lang.setLanguage()
+    }
+    ...
   }
 
 })
@@ -54,9 +56,7 @@ Then get your strings by placing the getStrings() method in Page.onLoad()
 // index/index.js
 
 onLoad: function (options) {
-
-	Lang.getPageStrings(this)
-
+  Lang.getPageStrings(this)
 }
 ```
 
@@ -67,13 +67,13 @@ Page({
 
   data: {
 
-	  strings: {
+    strings: {
 
-		  helloWorld: "Hello!"
+      helloWorld: "Hello!"
 
-		}
+    }
 
-	}
+  }
 
 })
 ```
