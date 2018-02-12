@@ -77,3 +77,31 @@ Page({
 
 })
 ```
+
+## Get / Set Language:
+Simply use the language library's functions to manually get / set language:
+```javascript
+// mypage.js
+const Lang = require('/libraries/mp-language/languages')
+const language = Lang.getLanguage()
+
+Page({
+  data: {
+    language,
+    ...
+  },
+  // Below method would be an event from a button / dialog on your Page WXML
+  userChooseLanguage: function (e) {
+    const language = e.currentTarget.dataset.chosenLanguage
+    // Set Language
+    Lang.setLanguage(language)
+    // Reload Strings on Page (Might need to promisify this)
+    Lang.getPageStrings()
+  }
+})
+```
+
+## What About Global Strings?
+No problem - define your common strings in `/languages/{language}/common.js`
+Then on your page, pass a second parameter to the `getPageStrings` function:
+`Lang.getPageStrings(this, true)`
