@@ -13,11 +13,11 @@ This tool was built to be smart, loading the strings on a by-page basis, which a
 
 Define your configuration settings in /languages/options.js Configuration settings are as follows:
 
-defaultLanguage (String): Language to fall back to when not loading phone language. Must also be defined in activeLanguages.
+`defaultLanguage` (String): Language to fall back to when not loading phone language. Must also be defined in activeLanguages.
 
-activeLanguages (Array): Array of language strings to use in your MP. To properly load the strings for your activeLanguage on a certain page, they must be located in a folder within the /languages folder with the same name. For example, the strings for English language ('en') must be in /languages/en/
+`activeLanguages` (Array): Array of language strings to use in your MP. To properly load the strings for your activeLanguage on a certain page, they must be located in a folder within the /languages folder with the same name. For example, the strings for English language ('en') must be in /languages/en/
 
-usePhoneLanguage (Boolean): Whether or not to auto set language to use language set by user's phone. If false, uses defaultLanguage setting.
+`usePhoneLanguage` (Boolean): Whether or not to auto set language to use language set by user's phone. If false, uses defaultLanguage setting.
 
 
 
