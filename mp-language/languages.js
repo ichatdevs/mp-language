@@ -58,7 +58,7 @@ class MPLang {
     try {
       const strings = require(pathToPageStrings)
       if (includeCommon) {
-        strings.common = require(`/languages/${currentLang}/common`)
+        strings.common = require(`${pathToStringsRoot}/${currentLang}/common`)
       }
       Page.setData({strings})
     } catch (e) {
